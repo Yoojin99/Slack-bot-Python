@@ -12,10 +12,15 @@
 ### 폴더 및 파일 설명
 .
 ├── 1. Basic Python Slack Bot
+
 │   └── BasicSlackBot.py # 기본 슬랙 파이썬 봇. 간단한 텍스트를 설정하여 슬랙에 보냅니다.
+
 ├── 2. Python-Bigquery 
+
 │   └── BigqueryBot.py # Bigquery 데이터를 python을 이용하여 바로 가져옵니다.
+
 └── 3. Python-Google Spreadsheet
+
     └── SpreadsheetBot.py # Google spreadsheet에 데이터를 쓰거나, 데이터를 읽습니다.
 
 ### 따라하기 및 설명
