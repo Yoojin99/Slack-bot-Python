@@ -23,9 +23,13 @@
 
 ### 따라하기 및 설명
 
-[1. Basic Python Slack Bot]()
-[2. Python-Bigquery]()
-[3. Python-Google Spreadsheet]()
+:closed_book: [1. Basic Python Slack Bot]()
+
+:orange_book: [2. Python-Bigquery]()
+
+:ledger: [3. Python-Google Spreadsheet]()
+
+:green_book: [4. All-in-one Bot]()
 
 ### 이걸 만들게 된 이유
 
@@ -33,7 +37,7 @@ Bigquery의 데이터를 Slack에 올리는 bot을 만드는 작업을 했습니
 
 기존에는 
 
-*Bigquery의 데이터를 Google Spreadsheet로 OWOX를 이용해서 가져오고, 가져온 데이터를 Google Spreadsheet 내에서 또 하나의 시트로 합치고, 데이터가 업데이트 될때마다 Zapier.io / Automate.io 라는 사이트를 이용해서 slack과 연동하여 slack에 메세지를 업로드*
+> *Bigquery의 데이터를 Google Spreadsheet로 OWOX를 이용해서 가져오고, 가져온 데이터를 Google Spreadsheet 내에서 또 하나의 시트로 합치고, 데이터가 업데이트 될때마다 Zapier.io /  Automate.io 라는 사이트를 이용해서 slack과 연동하여 slack에 메세지를 업로드*
 
 하는 방법을 사용했습니다.
 
