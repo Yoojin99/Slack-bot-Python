@@ -23,7 +23,7 @@
 
 ### 따라하기 및 설명
 
-:closed_book: [1. Basic Python Slack Bot]()
+:closed_book: [1. Basic Python Slack Bot](https://github.com/Yoojin99/Slack-bot-Python/tree/master/1.%20Basic%20Python%20Slack%20Bot)
 
 :orange_book: [2. Python-Bigquery]()
 
