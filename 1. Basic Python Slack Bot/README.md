@@ -77,5 +77,39 @@ curl -X POST -d "payload={\"text\": \"Hello\"}" [webhookurl]
 
 파이썬 코드에서는 이 webhook url을 이용하니 복사해두고 저장합시다.
 
+---
+
 ## Python 코드 작성
+
+코드는 정말 간단합니다. 위에서 생성한 webhook url을 복사하여 붙여넣고, payload(전달할 텍스트를 담은 것)을 작성한 후에 request를 이용하여 보내면 됩니다.
+
+전체적인 코드는 이미 `BasicSlackbot.py` 로 업로드 해놓았으니 그대로 복사해서 양식만 고쳐서 이용하셔도 됩니다.
+
+python3가 아닌 2버전을 이용하고 있는 분들은 맨 위에 `# -*- coding: utf8 -*- ` 를 추가해주세요.
+
+```python
+# -*- coding: utf8 -*- 
+
+import requests
+
+def slack_data() :
+    # write your webhook url here
+    url = "Webhookurl"
+
+    # replace here with data you want to send slack
+    text = (
+        "안녕하세요? ^^"
+        )
+
+    payload = {
+        "text": text
+    }
+
+    requests.post(url, json=payload)
+
+if __name__ == "__main__":
+    slack_data()
+```
+
+위의 `Webhookurl`에 아까 복사한 webhook url로 덮어씌우 주고, `text` 부분에 원하는 포맷으로 텍스트를 작성합니다. 그리고 이 python 코드를 실행시키면 해당 텍스트를 처음에 설정한 slack 채널에 봇이 메세지로 보낸 것을 확인할 수 있을 것입니다.
 
