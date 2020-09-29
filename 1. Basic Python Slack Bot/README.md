@@ -2,6 +2,11 @@
 
 여기는 slack 채널에 간단한 메세지를 올릴 수 있는 bot이 작동할 수 있도록 파이썬으로 코드를 작성하는 방법, 그리고 그에 필요한 slack app 생성에 대해 설명이 있습니다.
 
+## 목차
+
+* [Slack app 만들기](#slack-appbot-만들기)
+* [Python code 작성하기](#python-코드-작성)
+
 ## Slack app(bot) 만들기
 
 Slack app(bot)을 만들기 전에 두 가지 유형으로 나뉠 거 같습니다.
