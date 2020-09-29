@@ -53,3 +53,29 @@ curl -X POST -d "payload={\"text\": \"Hello\"}" [webhookurl]
 
 ![image](https://user-images.githubusercontent.com/41438361/94523408-1bbc9780-026c-11eb-9a88-75f90ff5ff4d.png)
 
+그럼 이제 python 코드를 작성할 준비가 다 된 것입니다.
+
+### 2. 이미 slack app을 만든 경우
+
+[slack api 사이트](https://api.slack.com/)에 접속해서 오른쪽 상단의 **Your apps** 를 클릭해줍니다.
+
+![image](https://user-images.githubusercontent.com/41438361/94524118-23307080-026d-11eb-9f9d-aceb33c6e881.png)
+
+그러면 이미 만들어진 봇이 있을 것입니다. 원하는 봇을 클릭해줍시다. 물론 새로운 봇을 만들어서 진행해도 괜찮습니다.
+
+![image](https://user-images.githubusercontent.com/41438361/94524546-b669a600-026d-11eb-9f1c-1d56c02065d9.png)
+
+왼쪽의 Feature 탭의 **Incoming Webhooks**에 들어가 줍니다. 만약 Incoming Webhook을 활성화를 해주지 않았다면 해주면 됩니다. 그러면 아래에 Webhook URLs for Your Workspace라고 똑같이 cmd 창에서 테스트 해 볼 수 있는 커맨드가 나옵니다.
+
+![image](https://user-images.githubusercontent.com/41438361/94524737-f761ba80-026d-11eb-9302-c99476dbe317.png)
+
+아래로 내려보면 Webhook URL만 따로 확인할 수 있습니다. 위의 커맨드에 포함되어 있는 webhook url을 따로 복사해도 됩니다.
+
+![image](https://user-images.githubusercontent.com/41438361/94524910-3a239280-026e-11eb-94d2-0a311460e5f7.png)
+
+만약 webhook url이 없다면 아래에 Add new webhook to workspace 버튼을 클릭해서 추가해도 됩니다.
+
+파이썬 코드에서는 이 webhook url을 이용하니 복사해두고 저장합시다.
+
+## Python 코드 작성
+
