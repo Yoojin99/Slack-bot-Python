@@ -1,4 +1,4 @@
-# Python과 Bigquery 연동하기, Bigquery에서 python으로 데이터 가져오기
+# Python으로 Google spreadsheet에 데이터 쓰기, 읽기
 
 ## 목차
 
