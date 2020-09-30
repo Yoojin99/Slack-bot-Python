@@ -2,6 +2,9 @@
 
 ## 목차
 
+1. [사용자 키 파일 가져오기](#1-사용자-키-파일-가져오기)
+2. [파이썬 코드 작성](#2-python-코드-작성)
+
 로컬에서 실행시키기 위해서는 Bigquery를 이용하기 위해 사용자 키에 대한 json 파일이 필요합니다.
 
 만약 Google Cloud Functions나 Google Cloud Scheduler와 같이 cloud platfom console에서 실행시키는 거면 키에 대한 json 파일을 따로 저장할 필요가 없습니다.
