@@ -85,7 +85,7 @@ def write_data():
     values = [
         ['Col A', '' ,'Col B', 'Col C', 'Col D'],
         ['Apple', 'Orange', 'Watermelon', 'Banana']
-    [
+    ]
 
     value_range_body = {
         'majorDimension': 'ROWS',
