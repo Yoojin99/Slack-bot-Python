@@ -9,7 +9,7 @@ from google.auth.transport.requests import Request
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SPREADSHEET_ID = '1uF6i_kPf9RU7J_ob6HzbtulHpSzErXDnOG62gB6kqPE'
+SPREADSHEET_ID = 'ID'
 # if your spread sheet name is 'cat' and range you want to print is 'A2:E'
 RANGE_NAME = 'cat!A2:E'
 
