@@ -27,7 +27,7 @@
 
 :orange_book: [2. Python-Bigquery](https://github.com/Yoojin99/Slack-bot-Python/tree/master/2.%20Python-Bigquery)
 
-:ledger: [3. Python-Google Spreadsheet](https://github.com/Yoojin99/Slack-bot-Python/tree/master/3.%20Python-Google%20Spreadsheet#2-python-code-%EC%9E%91%EC%84%B1)
+:ledger: [3. Python-Google Spreadsheet](https://github.com/Yoojin99/Slack-bot-Python/tree/master/3.%20Python-Google%20Spreadsheet)
 
 :green_book: [4. All-in-one Bot]()
 
