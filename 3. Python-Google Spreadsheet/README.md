@@ -2,8 +2,8 @@
 
 ## 목차
 
-1. [사용자 키 파일 가져오기](#1-사용자-키-파일-가져오기)
-2. [파이썬 코드 작성](#2-python-코드-작성)
+1. [`credentials.json` 파일 다운받기](#1-credentialsjson-파일-다운받기)
+2. [파이썬 코드 작성](#2-python-code-작성)
 
 
 ## 1. `credentials.json` 파일 다운받기
@@ -184,4 +184,76 @@ def write_data():
         range=worksheet_name + cell_range_insert,
         body=value_range_body
     ).execute()
+```
+# Eng
+
+## 1. credentials.json
+
+**`credentials.json` file is used for writing and reading values in google spreadsheet.**
+
+To access google spreadsheet through python code, we need to create a new cloud platform project and automatically enable the Google Sheets API.
+
+Considering that we already have our cloud platform project, we only need to enable the google sheets API.
+
+To do this, go [here](https://developers.google.com/sheets/api/quickstart/python) and click 
+
+![image](https://user-images.githubusercontent.com/41438361/94396222-7090dd00-019c-11eb-8d96-85ed64a25ca4.png)
+
+this button. 
+
+After clicking button, you'll see this screen. Click 'Back' button.
+
+![image](https://user-images.githubusercontent.com/41438361/94396373-bcdc1d00-019c-11eb-82a9-2f97566e5a98.png)
+
+Then select your cloud platform project and click 'Next' button.
+
+![image](https://user-images.githubusercontent.com/41438361/94396471-f3199c80-019c-11eb-868d-2248d45480d1.png)
+
+Click 'Create' button to make credentials file.
+
+![image](https://user-images.githubusercontent.com/41438361/94396656-599eba80-019d-11eb-8894-0ae09afcf504.png)
+
+Finally, you'll be able to download client configuration file.
+
+![image](https://user-images.githubusercontent.com/41438361/94396781-a2ef0a00-019d-11eb-9ca7-95d023ec9d16.png)
+
+After downloading this file, place anywhere in your folder where the python code exists.
+
+### + Install google client library (Optional)
+
+If you're running python slack code by using `google cloud functions`, you don't need to continue this step.
+
+This is only needed when you're running the python code in local computer.
+
+Run the following command to install the library.
+
+```
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+```
+
+## 2. token.pickle
+
+File `token.pickle` stores user's access and refresh tokens, and is created automatically when the authrization flow completes for the first time.
+
+You don't need to do something to create this file, because it is created automatically by code.
+
+If it is not created, check whether the following code exists in `write_google_sheet` function in your python code and add the following code to the front part of `write_google_sheet` function.
+
+```python
+creds = None
+
+if os.path.exists('token.pickle'):
+    with open('token.pickle', 'rb') as token:
+        creds = pickle.load(token)
+# If there are no (valid) credentials available, let the user log in.
+if not creds or not creds.valid:
+    if creds and creds.expired and creds.refresh_token:
+        creds.refresh(Request())
+    else:
+        flow = InstalledAppFlow.from_client_secrets_file(
+            'credentials.json', SCOPES)
+        creds = flow.run_local_server(port=0)
+    # Save the credentials for the next run
+    with open('token.pickle', 'wb') as token:
+        pickle.dump(creds, token)
 ```
