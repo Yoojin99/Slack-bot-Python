@@ -25,7 +25,7 @@
 
 :closed_book: [1. Basic Python Slack Bot](https://github.com/Yoojin99/Slack-bot-Python/tree/master/1.%20Basic%20Python%20Slack%20Bot)
 
-:orange_book: [2. Python-Bigquery]()
+:orange_book: [2. Python-Bigquery](https://github.com/Yoojin99/Slack-bot-Python/tree/master/2.%20Python-Bigquery)
 
 :ledger: [3. Python-Google Spreadsheet]()
 
