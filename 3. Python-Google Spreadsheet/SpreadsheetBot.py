@@ -82,10 +82,10 @@ def write_data():
     cell_range_insert = 'B2'
 
     # values you want to write
-    values = (
-        ('Col A', '' ,'Col B', 'Col C', 'Col D'),
-        ('Apple', 'Orange', 'Watermelon', 'Banana')
-    )
+    values = [
+        ['Col A', '' ,'Col B', 'Col C', 'Col D'],
+        ['Apple', 'Orange', 'Watermelon', 'Banana']
+    [
 
     value_range_body = {
         'majorDimension': 'ROWS',
